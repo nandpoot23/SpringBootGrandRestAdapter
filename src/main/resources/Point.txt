@@ -1,0 +1,50 @@
+************************************************************************************************************
+
+Since @SpringBootApplication annotation is enough to up the instance but main class & controller class 
+should be on the same package. If both are in different packages then we have to use the @ComponentScan 
+annotation by giving common package name to up the instance.  
+
+************************************************************************************************************
+
+@RequestMapping annotation is optional at class level.
+
+************************************************************************************************************
+
+We can not run the different application on same port in spring boot (same workspace). 
+If do so then, below message will come.
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+The Tomcat connector configured to listen on port 8080 failed to start. 
+The port may already be in use or the connector may be misconfigured.
+
+Action:
+
+Verify the connector's configuration, identify and stop any process that's listening on port 8080, or 
+configure this application to listen on another port.
+
+************************************************************************************************************
+
+So to make this possible type the below lines in your application.properties
+
+# Default port the server starts on
+
+server.port=6061 
+
+************************************************************************************************************
+
+DB:- SQL UNIQUE Constraint
+
+The UNIQUE constraint uniquely identifies each record in a database table.
+
+The UNIQUE and PRIMARY KEY constraints both provide a guarantee for uniqueness for a column or set of columns.
+
+A PRIMARY KEY constraint automatically has a UNIQUE constraint defined on it.
+
+Note that we can have many UNIQUE constraints per table, but only one PRIMARY KEY constraint per table.
+
+************************************************************************************************************

@@ -1,0 +1,53 @@
+buildscript {
+
+	ext {
+		springBootVersion = '1.4.2.RELEASE'
+	}
+
+	repositories {
+		mavenCentral()
+	}
+
+	dependencies {
+		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+	}
+
+}
+
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'org.springframework.boot'
+
+jar {
+	baseName = 'SpringBootGrandRestAdapter'
+	version = '0.0.1-SNAPSHOT'
+}
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+repositories {
+	mavenCentral()
+}
+
+
+dependencies {
+
+    compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-jdbc')
+	
+	compile group: 'commons-lang', name: 'commons-lang', version: '2.6'
+	compile group: 'commons-collections', name: 'commons-collections', version: '3.2.1'
+	
+	compile group: 'org.apache.ws.security', name: 'wss4j', version: '1.6.18'
+
+    compile group: 'org.mockito', name: 'mockito-all', version: '1.10.19'
+    compile group: 'org.mockito', name: 'mockito-core', version: '1.10.19'
+	
+	testCompile('org.powermock:powermock-mockito-release-full:1.6.2')
+	
+	testCompile('org.springframework.boot:spring-boot-starter-test')
+	
+	runtime('mysql:mysql-connector-java')
+
+}

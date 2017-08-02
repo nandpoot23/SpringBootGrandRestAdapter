@@ -1,0 +1,55 @@
+Default port to start : 6061
+
+Rest Web Service URL : http://localhost:6061/dmCustomer/v1 
+
+Get method :-
+
+http://localhost:6061/test
+
+Post method :-
+
+http://localhost:6061/empConfig
+http://localhost:6061/empConfigAddress
+http://localhost:6061/empInsertConfig
+http://localhost:6061/empUpdateConfig
+http://localhost:6061/empDeleteConfig
+   
+Post JSON request:-
+
+/empConfig (based on id it retrieves all the information of a particular record)
+
+{
+"id" : 1
+}
+
+/empConfigAddress (based on address it retrieves all the information of multiple records)
+
+{
+"address" : "Sec49"
+}
+
+/empInsertConfig (insert all the information to the database)
+
+{
+"firstName" : "Roo10",
+"lastName" : "L4",
+"address" : "Sec54",
+"city" : "BNDA",
+"email" : "r7@gmail.com",
+"mobile" : "644681900"
+}
+
+/empUpdateConfig (based on id it updates firstName, email & mobile number of a particular record)
+
+{
+"id" : 9,
+"firstName" : "Roo16",
+"email" : "r9@gmail.com",
+"mobile" : "644681100"
+}
+
+/empDeleteConfig (based on id it removes all the information of a particular record)
+
+{
+"id" : 20
+}
